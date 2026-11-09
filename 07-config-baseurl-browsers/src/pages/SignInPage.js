@@ -10,8 +10,8 @@ export class SignInPage {
   }
 
   async open() {
-    await this.page.goto('https://conduit.mate.academy/user/login');
-  }
+    await this.page.goto('/user/login');
+}
 
   async fillEmailField(email) {
     await this.emailField.fill(email);

@@ -11,8 +11,8 @@ export class SignUpPage {
   }
 
   async open() {
-    await this.page.goto('https://conduit.mate.academy/user/register');
-  }
+    await this.page.goto('user/register');
+}
 
   async fillUsernameField(username) {
     await this.usernameField.fill(username);
