@@ -1,0 +1,1 @@
+Playwright: practice working with test files organization.
