@@ -10,4 +10,13 @@ test('`Sign up` form elements presence', async ({ page }) => {
   6. Assert that the input field 'Password' is visible
   7. Assert that the button 'Sign up' is visible
   */
+  await page.goto('https://conduit.mate.academy/user/register');
+  await expect(page.getByRole('heading', { name: 'Sign up' })).toBeVisible();
+  await expect(
+    page.getByRole('link', { name: 'Have an account?' }),
+  ).toBeVisible();
+  await expect(page.getByPlaceholder('Username')).toBeVisible();
+  await expect(page.getByPlaceholder('Email')).toBeVisible();
+  await expect(page.getByPlaceholder('Password')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Sign up' })).toBeVisible();
 });
