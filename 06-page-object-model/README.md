@@ -1,0 +1,1 @@
+Playwright: practice working with basic POM impelementaton for Conduit Sign Up functionality.
