@@ -8,6 +8,8 @@ test('Sign In link test', async ({ page }) => {
 
  test('Sign UP link test', async ({ page }) => {
   // Add your code below this line:
- 
+  await page.goto ('https://conduit.mate.academy');
+  await page.getByRole('link', { name: 'Sign up' }).click();
+  await page.waitForURL('https://conduit.mate.academy/user/register');
  });
  
