@@ -10,3 +10,13 @@ test('Successful `Sign in` flow test', async ({ page }) => {
   6. Click on 'Your Feed' tab
   */
 });
+test('Sign in user flow', async ({ page }) => {
+  await page.goto('https://conduit.mate.academy/user/login');
+
+  await page.getByPlaceholder('Email').fill('testertester@gmail.com');
+  await page.getByPlaceholder('Password').fill('1234');
+
+  await page.getByRole('button', { name: 'Sign in' }).click();
+
+  await page.waitForURL('https://conduit.mate.academy/');
+});
